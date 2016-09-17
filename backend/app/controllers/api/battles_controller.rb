@@ -1,5 +1,5 @@
 class Api::BattlesController < ApplicationController
-  #before_action :authenticate_api_user!
+  before_action :authenticate_api_user!
 
   def create
     @battle = Battle.new(battle_params)
@@ -7,10 +7,9 @@ class Api::BattlesController < ApplicationController
   end
 
   def show
+    
     @battle = Battle.find(params[:id])
     @participants = @battle.users.all
-
-
     @category = @battle.category
     @info = @battle.info
 
@@ -23,15 +22,22 @@ class Api::BattlesController < ApplicationController
       }
   end
 
-  def join
-    #@battle = Battle.find(params[:id])
-    #@user = current_api_user
-  end
-
   def destroy
     @battle = Battle.find(params[:id])
     @battle.destroy
   end
+
+
+  def invite
+
+  end
+
+  def join
+    @battle = Battle.find(params[:id])
+    @user = current_api_user
+  end
+
+
 
   private
 

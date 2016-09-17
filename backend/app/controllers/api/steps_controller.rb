@@ -1,5 +1,5 @@
 class Api::StepsController < ApplicationController
-  before_action: authenticate_api_user!
+  before_action :authenticate_api_user!
 
   def step_update
     current_user.steps += step_params.count
