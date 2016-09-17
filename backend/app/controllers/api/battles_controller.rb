@@ -7,7 +7,7 @@ class Api::BattlesController < ApplicationController
   end
 
   def show
-    
+
     @battle = Battle.find(params[:id])
     @participants = @battle.users.all
     @category = @battle.category
@@ -27,7 +27,6 @@ class Api::BattlesController < ApplicationController
     @battle.destroy
   end
 
-
   def invite
 
   end
@@ -36,8 +35,6 @@ class Api::BattlesController < ApplicationController
     @battle = Battle.find(params[:id])
     @user = current_api_user
   end
-
-
 
   private
 

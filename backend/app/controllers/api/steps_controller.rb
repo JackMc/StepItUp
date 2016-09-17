@@ -2,10 +2,10 @@ class Api::StepsController < ApplicationController
   before_action :authenticate_api_user!
 
   def step_update
-    current_user.steps += step_params.count
+    current_api_user.steps += step_params.count
   end
   def reset_steps
-    current_user.steps = 0
+    current_api_user.steps = 0
   end
 
 
