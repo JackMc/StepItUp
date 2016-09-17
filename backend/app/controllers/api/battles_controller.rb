@@ -1,10 +1,6 @@
 class Api::BattlesController < ApplicationController
   #before_action :authenticate_api_user!
 
-
-
-
-
   def create
     @battle = Battle.new(battle_params)
     @battle.save
@@ -15,12 +11,12 @@ class Api::BattlesController < ApplicationController
     @participants = @battle.users.all
 
 
-    @type = @battle.category
+    @category = @battle.category
     @info = @battle.info
 
     render json: {
 
-        participants: @participants.to_json,
+        participants: @participants,
         category: @category,
         info: @info
 
