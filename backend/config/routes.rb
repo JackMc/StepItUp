@@ -4,7 +4,7 @@ namespace :api do
     resources :battles
     resources :steps
 
-
+    
 
   scope '/friends' do
     post '/add' => 'friends#add_friend'
