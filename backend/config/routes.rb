@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
 namespace :api do
     resources :battles
-    resources :steps
+    resources :users do
+      resources :steps, only: [:create, :destroy]
+    end
 
-    
+
 
   scope '/friends' do
     post '/add' => 'friends#add_friend'
