@@ -19,23 +19,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="palm" translatesAutoresizingMaskIntoConstraints="NO" id="FwU-yU-a54"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jya-qJ-m1r">
-                                <state key="normal" title="Sign In"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.0083057133839999995" green="0.0083057133839999995" blue="0.0083057133839999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="show" id="sFu-Xt-3C5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl0-TV-oRc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="323" id="IjE-JC-LK9"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Step It App">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0083057133839999995" green="0.0083057133839999995" blue="0.0083057133839999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="64" name="HelveticaNeue-CondensedBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already a member?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnC-HL-N4Z">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="yhK-mj-QSG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-36-dB2">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.0083057133839999995" green="0.0083057133839999995" blue="0.0083057133839999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.5641777515411377" green="0.90280818939208984" blue="0.91700452566146851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jya-qJ-m1r" firstAttribute="centerY" secondItem="Eiu-EN-ZTK" secondAttribute="centerY" id="2QW-6C-m9Y"/>
-                            <constraint firstItem="jya-qJ-m1r" firstAttribute="centerX" secondItem="Eiu-EN-ZTK" secondAttribute="centerX" id="7Aj-yc-o46"/>
+                            <constraint firstItem="Yl0-TV-oRc" firstAttribute="leading" secondItem="EnC-HL-N4Z" secondAttribute="leading" id="3oh-aM-XMa"/>
+                            <constraint firstItem="FwU-yU-a54" firstAttribute="trailing" secondItem="EnC-HL-N4Z" secondAttribute="trailing" id="6My-oF-xAi"/>
+                            <constraint firstItem="hpx-36-dB2" firstAttribute="centerX" secondItem="EnC-HL-N4Z" secondAttribute="centerX" id="E5L-J3-2e5"/>
+                            <constraint firstItem="Yl0-TV-oRc" firstAttribute="leading" secondItem="Eiu-EN-ZTK" secondAttribute="leading" id="FVE-v3-Jcs"/>
+                            <constraint firstItem="FwU-yU-a54" firstAttribute="centerY" secondItem="hpx-36-dB2" secondAttribute="centerY" id="FxA-Sd-952"/>
+                            <constraint firstItem="Yl0-TV-oRc" firstAttribute="top" secondItem="FwU-yU-a54" secondAttribute="top" id="IT3-Up-qb6"/>
+                            <constraint firstItem="FU2-7o-arV" firstAttribute="top" secondItem="jya-qJ-m1r" secondAttribute="bottom" constant="31" id="Nkk-Oh-gpp"/>
+                            <constraint firstItem="Yl0-TV-oRc" firstAttribute="trailing" secondItem="EnC-HL-N4Z" secondAttribute="trailing" id="VtH-hQ-WK3"/>
+                            <constraint firstItem="FwU-yU-a54" firstAttribute="leading" secondItem="Yl0-TV-oRc" secondAttribute="leading" id="YX8-iG-boP"/>
+                            <constraint firstAttribute="trailing" secondItem="FwU-yU-a54" secondAttribute="trailing" id="cRb-u0-lKl"/>
+                            <constraint firstItem="EnC-HL-N4Z" firstAttribute="centerX" secondItem="jya-qJ-m1r" secondAttribute="centerX" id="ee6-HQ-BeY"/>
+                            <constraint firstItem="jya-qJ-m1r" firstAttribute="top" secondItem="EnC-HL-N4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="hcR-qm-gc2"/>
+                            <constraint firstItem="FwU-yU-a54" firstAttribute="top" secondItem="Eiu-EN-ZTK" secondAttribute="top" id="jRG-mp-Kpg"/>
+                            <constraint firstItem="FwU-yU-a54" firstAttribute="bottom" secondItem="FU2-7o-arV" secondAttribute="top" id="tbE-cZ-3kK"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaQ-cB-gPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="-926"/>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-926.08695652173924"/>
         </scene>
         <!--Dash-->
         <scene sceneID="hNz-n2-bh7">
@@ -284,5 +329,6 @@
         <image name="User Group Man Man" width="25" height="25"/>
         <image name="default-profile" width="150" height="150"/>
         <image name="fine" width="70" height="67"/>
+        <image name="palm" width="320" height="480"/>
     </resources>
 </document>
