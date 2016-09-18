@@ -1,13 +1,18 @@
 class Api::StepsController < ApplicationController
-  before_action :authenticate_api_user!
 
-  def step_update
-    current_api_user.steps += step_params.count
+  before_action :authenticate_api_user!, :except => [:index]
+  def create
+    @step = Step.new(step_params)
+    @step.save
   end
-  def reset_steps
-    current_api_user.steps = 0
+  def index
+    @step = Step
   end
 
+  def destroy
+    @battle = Battle.find(params[:id])
+    @battle.destroy
+  end
 
   private
   def step_params

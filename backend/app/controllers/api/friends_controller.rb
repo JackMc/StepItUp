@@ -25,6 +25,11 @@ before_action :authenticate_api_user!
     @me.decline_request(@friend)
   end
 
+  def show_friends
+    @friends = current_api_user.friends.all
+    render json: {friends:@friends}
+  end
+
   private
 
   def friend_params
