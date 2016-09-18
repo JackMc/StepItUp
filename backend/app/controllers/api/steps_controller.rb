@@ -6,7 +6,7 @@ class Api::StepsController < ApplicationController
     @step.save
   end
   def index
-    @step = Step
+    @step = Step.where(created_at < Date.today && created_at >= Date.yesterday)
   end
 
   def destroy
