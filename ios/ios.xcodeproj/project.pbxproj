@@ -16,6 +16,9 @@
 		3107F54C1D8D033E00E0F1ED /* iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107F54B1D8D033E00E0F1ED /* iosTests.swift */; };
 		3107F5571D8D033E00E0F1ED /* iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107F5561D8D033E00E0F1ED /* iosUITests.swift */; };
 		310B6DE31D8DCC90004468AF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B6DE21D8DCC90004468AF /* MainViewController.swift */; };
+		310B6DE51D8DEE82004468AF /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B6DE41D8DEE82004468AF /* FriendTableViewCell.swift */; };
+		310B6DE71D8DF2BC004468AF /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B6DE61D8DF2BC004468AF /* FriendTableViewController.swift */; };
+		310B6DEA1D8DF413004468AF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B6DE91D8DF413004468AF /* Friend.swift */; };
 		318453A61D8DB56B00A1ADDE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318453A51D8DB56B00A1ADDE /* ProfileViewController.swift */; };
 		318453A81D8DB61400A1ADDE /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318453A71D8DB61400A1ADDE /* BattleViewController.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +56,9 @@
 		3107F5561D8D033E00E0F1ED /* iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosUITests.swift; sourceTree = "<group>"; };
 		3107F5581D8D033E00E0F1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		310B6DE21D8DCC90004468AF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		310B6DE41D8DEE82004468AF /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		310B6DE61D8DF2BC004468AF /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
+		310B6DE91D8DF413004468AF /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		318453A51D8DB56B00A1ADDE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		318453A71D8DB61400A1ADDE /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,16 +111,15 @@
 		3107F5331D8D033E00E0F1ED /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				310B6DE81D8DF3CD004468AF /* ViewControllers */,
 				3107F5341D8D033E00E0F1ED /* AppDelegate.swift */,
-				310B6DE21D8DCC90004468AF /* MainViewController.swift */,
-				3107F5361D8D033E00E0F1ED /* DashViewController.swift */,
-				3107F5381D8D033E00E0F1ED /* FriendViewController.swift */,
-				318453A51D8DB56B00A1ADDE /* ProfileViewController.swift */,
-				318453A71D8DB61400A1ADDE /* BattleViewController.swift */,
 				3107F53A1D8D033E00E0F1ED /* Main.storyboard */,
 				3107F53D1D8D033E00E0F1ED /* Assets.xcassets */,
 				3107F53F1D8D033E00E0F1ED /* LaunchScreen.storyboard */,
 				3107F5421D8D033E00E0F1ED /* Info.plist */,
+				310B6DE41D8DEE82004468AF /* FriendTableViewCell.swift */,
+				310B6DE61D8DF2BC004468AF /* FriendTableViewController.swift */,
+				310B6DE91D8DF413004468AF /* Friend.swift */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -135,6 +140,18 @@
 				3107F5581D8D033E00E0F1ED /* Info.plist */,
 			);
 			path = iosUITests;
+			sourceTree = "<group>";
+		};
+		310B6DE81D8DF3CD004468AF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				310B6DE21D8DCC90004468AF /* MainViewController.swift */,
+				3107F5381D8D033E00E0F1ED /* FriendViewController.swift */,
+				318453A71D8DB61400A1ADDE /* BattleViewController.swift */,
+				318453A51D8DB56B00A1ADDE /* ProfileViewController.swift */,
+				3107F5361D8D033E00E0F1ED /* DashViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,11 +292,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3107F5391D8D033E00E0F1ED /* FriendViewController.swift in Sources */,
+				310B6DE71D8DF2BC004468AF /* FriendTableViewController.swift in Sources */,
 				3107F5351D8D033E00E0F1ED /* AppDelegate.swift in Sources */,
 				318453A61D8DB56B00A1ADDE /* ProfileViewController.swift in Sources */,
 				310B6DE31D8DCC90004468AF /* MainViewController.swift in Sources */,
 				3107F5371D8D033E00E0F1ED /* DashViewController.swift in Sources */,
+				310B6DEA1D8DF413004468AF /* Friend.swift in Sources */,
 				318453A81D8DB61400A1ADDE /* BattleViewController.swift in Sources */,
+				310B6DE51D8DEE82004468AF /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
