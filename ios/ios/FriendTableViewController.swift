@@ -10,14 +10,29 @@ import UIKit
 
 class FriendTableViewController: UITableViewController {
 
+    var friends = [Friend]()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Load sample data
+        loadSampleFriends()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func loadSampleFriends() {
+        let photo1 = UIImage(named: "cow")!
+        let friend1 = Friend(fromName: "Lucinda Cow", fromSteps: 10001, fromImage:photo1)
+        let photo2 = UIImage(named: "chicken")!
+        let friend2 = Friend(fromName: "Matilda Hen", fromSteps: 10001, fromImage: photo2)
+        
+        friends += [friend1, friend2]
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +41,7 @@ class FriendTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

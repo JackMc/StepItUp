@@ -9,5 +9,13 @@
 import UIKit
 
 class Friend: NSObject {
-
+    var name: String
+    var steps: Int
+    var photo: UIImage
+    
+    init(fromName:String, fromSteps:Int, fromImage:UIImage ) {
+        name = fromName
+        steps = fromSteps
+        photo = fromImage
+    }
 }
